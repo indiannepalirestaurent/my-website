@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Restaurant Shanti | Ichikawa, Chiba</title>
+<meta name="description" content="Indian Restaurant Shanti in Yawata, Ichikawa, Chiba. Lunch, dinner, takeout and delivery.">
+<style>
+:root{
+  --bg:#fffaf2; --paper:#ffffff; --ink:#2d241f; --muted:#756a62;
+  --accent:#c96b2c; --accent2:#8b2f20; --gold:#d7a13b; --line:#eadfd2;
+  --shadow:0 14px 40px rgba(55,35,20,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(255,250,242,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;font-size:1.2rem;color:var(--accent2)}
+.logo span{display:block;font-size:.72rem;color:var(--muted);font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+nav{display:flex;gap:24px;align-items:center}
+nav a{font-size:.94rem;font-weight:700}
+nav a:hover{color:var(--accent)}
+.menu-btn{display:none;border:0;background:var(--accent2);color:white;padding:9px 12px;border-radius:9px;font-size:1.2rem}
+.hero{padding:75px 0 65px;background:radial-gradient(circle at 80% 20%,#f8dfb4 0,transparent 30%),linear-gradient(135deg,#fffaf2,#f9ead6)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+.badge{display:inline-block;background:#f4dfc2;color:var(--accent2);font-weight:800;border-radius:999px;padding:7px 13px;margin-bottom:18px;font-size:.84rem}
+h1{font-size:clamp(2.6rem,6vw,5.1rem);line-height:1.02;letter-spacing:-.05em;margin-bottom:20px}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:620px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 20px;border-radius:12px;font-weight:800;border:1px solid var(--accent2)}
+.btn.primary{background:var(--accent2);color:#fff}
+.btn.secondary{background:#fff}
+.photo{background:var(--paper);padding:12px;border-radius:24px;box-shadow:var(--shadow);transform:rotate(2deg)}
+.photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px}
+section{padding:82px 0}
+.section-head{margin-bottom:35px}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:900;font-size:.78rem}
+h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin-top:7px}
+.lead{color:var(--muted);max-width:700px;margin-top:10px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 8px 25px rgba(55,35,20,.05)}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.value strong{display:block;color:var(--accent2);margin-bottom:4px}
+.value p{color:var(--muted);font-size:.92rem}
+.menus{background:#2f211b;color:#fff8ef}
+.menus .lead{color:#d9c8ba}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.menu-card{background:#3b2921;border:1px solid #60483a;border-radius:20px;padding:30px}
+.menu-card h3{font-size:1.55rem;margin-bottom:16px;color:#ffd78a}
+.item{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid #5a4337}
+.item:last-child{border-bottom:0}
+.item small{display:block;color:#cdbeb4}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{padding:28px;border-radius:18px;background:#fff;border:1px solid var(--line)}
+.service h3{margin-bottom:6px;color:var(--accent2)}
+.service p{color:var(--muted)}
+.contact{background:#f3dfc7}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-card{background:#fff;padding:30px;border-radius:20px}
+.contact-row{padding:12px 0;border-bottom:1px solid var(--line)}
+.contact-row:last-child{border-bottom:0}
+footer{background:#241914;color:#dbcfc7;padding:30px 0}
+.footer-flex{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+small.note{color:#a9978c}
+@media(max-width:760px){
+  nav{display:none;position:absolute;left:0;right:0;top:72px;background:#fffaf2;padding:18px 4%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+  nav.open{display:flex}.menu-btn{display:block}
+  .hero-grid,.about-grid,.menu-grid,.contact-grid{grid-template-columns:1fr}
+  .service-grid{grid-template-columns:1fr}
+  .hero{padding-top:45px}
+  section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">Indian Restaurant Shanti<span>Ichikawa · Chiba</span></a>
+    <button class="menu-btn" aria-label="Open menu" onclick="toggleNav()">☰</button>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Access</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">Authentic Indian Restaurant · Yawata, Ichikawa</div>
+      <h1>Indian Restaurant Shanti</h1>
+      <p>Warm hospitality, comforting Indian flavors, and simple food made for sharing. Visit us for lunch or dinner, or enjoy Shanti at home with takeout and delivery.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#menu">View Menu</a>
+        <a class="btn secondary" href="#contact">Find Us</a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="image.jpg" alt="Indian Restaurant Shanti">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">About Shanti</div>
+      <h2>Good food. Honest service. A place to feel welcome.</h2>
+      <p class="lead">Shanti is an Indian restaurant in Yawata, Ichikawa, Chiba, focused on friendly service and a straightforward dining experience.</p>
+    </div>
+    <div class="about-grid">
+      <div class="card">
+        <h3>Our story</h3>
+        <p style="margin-top:10px;color:var(--muted)">We aim to bring satisfying Indian meals and welcoming hospitality to our local community. Whether you are stopping by for lunch, having dinner with friends, or ordering from home, our goal is simple: make every visit comfortable and enjoyable.</p>
+      </div>
+      <div class="values">
+        <div class="card value"><strong>Truth-driven</strong><p>Honest food and straightforward service.</p></div>
+        <div class="card value"><strong>Collaboration</strong><p>We grow together with our guests and community.</p></div>
+        <div class="card value"><strong>Unpretentious</strong><p>Simple, welcoming, and easygoing.</p></div>
+        <div class="card value"><strong>Audacious</strong><p>Confident flavors and a willingness to try.</p></div>
+        <div class="card value"><strong>Growth-oriented</strong><p>Always learning and improving.</p></div>
+        <div class="card value"><strong>Achievement</strong><p>Creating memorable meals and happy customers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menus" id="menu">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" style="color:#f2b75e">Our Menu</div>
+      <h2>Lunch & Dinner</h2>
+      <p class="lead">Sample menu layout — replace the item names and prices with your actual menu.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>Lunch Menu</h3>
+        <div class="item"><span>Lunch Curry Set<small>Curry, naan/rice, salad</small></span><b>¥ —</b></div>
+        <div class="item"><span>Chicken Curry Set<small>Choice of naan or rice</small></span><b>¥ —</b></div>
+        <div class="item"><span>Vegetable Curry Set<small>Seasonal vegetables</small></span><b>¥ —</b></div>
+        <div class="item"><span>Daily Special<small>Ask our staff for today's special</small></span><b>¥ —</b></div>
+      </div>
+      <div class="menu-card">
+        <h3>Dinner Menu</h3>
+        <div class="item"><span>Chicken Tikka<small>Indian-style grilled chicken</small></span><b>¥ —</b></div>
+        <div class="item"><span>Butter Chicken<small>Rich and creamy curry</small></span><b>¥ —</b></div>
+        <div class="item"><span>Vegetable Curry<small>Flavorful vegetarian option</small></span><b>¥ —</b></div>
+        <div class="item"><span>Cheese Naan<small>Freshly baked naan</small></span><b>¥ —</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="service">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Service</div>
+      <h2>Enjoy Shanti your way.</h2>
+    </div>
+    <div class="service-grid">
+      <div class="service"><h3>🍽️ Dine In</h3><p>Relax and enjoy your meal at Indian Restaurant Shanti.</p></div>
+      <div class="service"><h3>🥡 Take Out</h3><p>Take your favorite Indian dishes home with you.</p></div>
+      <div class="service"><h3>🛵 Delivery</h3><p>Order through Uber Eats and Demae-can where available.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Access</div>
+      <h2>Come visit us.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-row"><strong>Restaurant</strong><br>Indian Restaurant Shanti</div>
+        <div class="contact-row"><strong>Address</strong><br>Chiba-ken Ichikawa-shi Yawata 3-27-22-1F</div>
+        <div class="contact-row"><strong>Transportation</strong><br>Convenient access from Yawata area. Please check the map for the best route.</div>
+      </div>
+      <div class="contact-card">
+        <h3>Delivery & Takeout</h3>
+        <p style="color:var(--muted);margin-top:8px">Available services include takeout and delivery through Uber Eats and Demae-can, subject to service-area availability.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Indian+Restaurant+Shanti+Chiba+Ken+Ichikawa+shi+Yawata+3-27-22-1F" target="_blank" rel="noopener">Open Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-flex">
+    <div><strong>Indian Restaurant Shanti</strong><br><small class="note">Ichikawa, Chiba</small></div>
+    <small class="note">© <span id="year"></span> Indian Restaurant Shanti</small>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){
+  document.getElementById('nav').classList.toggle('open');
+}
+document.querySelectorAll('#nav a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open'));
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
